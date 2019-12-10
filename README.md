@@ -94,7 +94,7 @@ Beadandó feladat az ELTE Informatikai Karon, az Alkalmazások fejlesztése nev�
 
 ### Használati eset diagram
 
-![hasznalatiEsetDiagram](usecase.jpg)
+![hasznalatiEsetDiagram](usecase.png)
 
 ### Könyvtár stuktúra
 
@@ -173,15 +173,14 @@ Beadandó feladat az ELTE Informatikai Karon, az Alkalmazások fejlesztése nev�
 ### Kliensoldali szolgáltatások listája ###
 
 - **Regisztráció:** Minden látogató számára elérhető. Felhasználónév és jelszó megadása szükséges. Abban az esetben, ha valamelyik mezőt nem jól töltjük ki, a bejelentkezés meghíúsul.
-![Regisztracio](images/Register.jpg)
+![Regisztracio](register.png)
 - **Bejelentkezés:** A regisztrált felhasználók számára elérhető. Felhasználónév és jelszó megadása szükséges. Bejelentkezés után használhatjuk az alakalmazást.
-![Bejelentkezes](images/Login.jpg)
-- **Szűrés:**  Az étlapon lévő ételeket, italokat szűrhetjük. Szűrhetünk levesre, főételre, húsokra stb. Az összes étel, ital kilistázására is van lehetőség.
-![Szűrés](images/SessionNew.jpg)
+![Bejelentkezes](login.png)
 - **Hozzáadás és módosítás:** Hozzáadhatunk vagy módosíthatunk ételeket, italokat az étlapon.
-![Hozzaadas](images/SessionNew.jpg)
+![Hozzaadas](newfood.png)
 - **Törlés:** Az elérhető ételeket és italokat törölhetjük a rendszerből, feltéve ha Alkalmazottként vagyunk bejelentkezve.
-![Torles](images/Puzzle.jpg)
+![Torles](delete.png)
+- **Szűrés:**  Az étlapon lévő ételeket, italokat szűrhetjük. Szűrhetünk levesre, főételre, húsokra stb. Az összes étel, ital kilistázására is van lehetőség.
 - **Kijelentkezés:** Kijelentkezünk az alakalmazásból
 
 ### Kapcsolat a szerverrel ###
