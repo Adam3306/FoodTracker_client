@@ -1,0 +1,44 @@
+<div class="row">
+<div class="col">
+	<h1 class="display-2">My drinks</h1>
+	<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">Title</th>
+			<th scope="col">Description</th>
+			<th scope="col">Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let drink of filteredDrinks" (click)="onSelectDrink(drink)" [class.table-info]="drink === selectedDrink" >
+		<td>
+			<a [routerLink]="['/drinks', drink.id]">
+			{{ drink.title }}
+			</a>
+		</td>
+		<td>{{ drink.description }}</td>
+		<td>{{ drink.price }} HUF</td>
+		<td>
+			<button *ngIf="userService?.user?.role !== 'ROLE_ADMIN'" mat-raised-button color="primary" (click)="onOrdered(drink.id)">Rendelés</button>    
+		</td>
+		<td>
+			<button *ngIf="userService?.user?.role === 'ROLE_ADMIN'" mat-raised-button color="primary" (click)="onDeleteClick(drink.id)">Delete</button>
+		</td>
+		</tr>
+	</tbody>
+	</table>
+</div>
+</div>
+
+<!-- <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter> -->
+
+<div *ngIf="userService.user?.role === 'ROLE_ADMIN'">
+
+	<button mat-raised-button color="primary" (click)="onNewClick()">New drink</button>
+	<div class="col" *ngIf="selectedDrink">
+		<drink-form [drink]="selectedDrink" (onSubmit)="onFormSubmit($event)"></drink-form>
+	</div>
+</div>
+
+
+

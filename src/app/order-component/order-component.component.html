@@ -1,0 +1,54 @@
+<div class="row" *ngIf="orders.length > 0">
+    <div class="col">
+      <h1 class="display-2">My orders</h1>
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>
+              <a>
+                {{ order?.title }}
+              </a>
+            </td>
+            <td>
+                <a>
+                  {{ order?.price }} HUF
+                </a>
+              </td>
+            <td>
+              <button mat-raised-button color="primary" (click)="onDeleteClicked(order.id, order.title)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+	  </table>
+	  <form>
+    <div>
+      <p>Total: {{ total }} HUF</p>
+    </div>
+	  <div>
+			<mat-form-field>
+        <form (ngSubmit)="activate($event)">
+          <input matInput placeholder="Kuponkód" name="discount">
+        </form>
+			</mat-form-field>
+      <!-- <button mat-raised-button color="primary" (click)="activate()">Aktivalas</button> -->
+		</div>
+		<div> 
+			<mat-form-field>
+			  <textarea matInput placeholder="Megjegyzés	"></textarea>
+			</mat-form-field>
+		</div>
+		  </form>
+       <button mat-raised-button color="primary" (click)="order()">Rendel</button>
+		   <mat-checkbox>Kérek számlát</mat-checkbox>
+       <br>
+	</div>
+	
+  </div>
+
+  <div *ngIf="userService?.user?.role !== 'ROLE_ADMIN' && orders.length === 0">
+    <h1>Meg nem rendeltel semmit.</h1>
+  </div>
+
+  <div *ngIf="userService?.user?.role === 'ROLE_ADMIN' && orders.length === 0">
+    <h1>Meg nem rendeltek semmit.</h1>
+  </div>

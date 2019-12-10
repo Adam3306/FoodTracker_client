@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col">
+      <h1 class="display-2">My foods</h1>
+      <table class="table">
+        <thead>
+          <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let food of filteredFoods" (click)="onSelectFood(food)" [class.table-info]="food === selectedFood" >
+            <td>
+              <a [routerLink]="['/foods', food.id]">
+                {{ food.title }}
+              </a>
+            </td>
+            <td>{{ food.description }}</td>
+            <td>{{ food.price }} HUF</td>
+            <td>
+              <button *ngIf="userService?.user?.role !== 'ROLE_ADMIN'" mat-raised-button color="primary" (click)="onOrdered(food.id)">Rendelés</button>    
+            </td>
+            <td>
+              <button  *ngIf="userService?.user?.role === 'ROLE_ADMIN'" mat-raised-button color="primary" (click)="onDeleteClick(food.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- <status-filter [status]="selectedStatus" (onChange)="onFilterChange($event)"></status-filter> -->
+  
+  <div *ngIf="userService?.user?.role === 'ROLE_ADMIN'" >
+    <button mat-raised-button color="primary" (click)="onNewClick()">New food</button>
+    <div class="col" *ngIf="selectedFood">
+      <food-form [food]="selectedFood" (onSubmit)="onFormSubmit($event)"></food-form>
+    </div>
+  </div>
+
+
+  
+  
+    
+    
+  

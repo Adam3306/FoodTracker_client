@@ -1,0 +1,16 @@
+
+<h1 class="display-2">food #{{ food.id }}</h1>
+<dl class="row">
+  <dt class="col-sm-3">Title</dt>
+  <dd class="col-sm-9">{{ food.title }}</dd>
+
+  <dt class="col-sm-3">Location</dt>
+  <dd class="col-sm-9">{{ food.location }}</dd>
+  
+  <dt class="col-sm-3">Description</dt>
+  <dd class="col-sm-9">{{ food.description }}</dd>
+  
+  <dt class="col-sm-3">Status</dt>
+  <dd class="col-sm-9">{{ food.status }}</dd>
+</dl>
+<button mat-raised-button routerLink="/foods">Back</button>

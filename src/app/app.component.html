@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <button mat-button href="/foods">
+    <mat-icon>home</mat-icon>
+    Food tracker
+  </button>
+
+  <span class="fill-remaining-space" fxHide="false" fxHide.gt-sm></span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <div *ngIf="authService.isLoggedIn">
+      <button mat-button routerLink="/foods">Ételek</button>
+      <button mat-button routerLink="/drinks">Italok</button>
+      <button mat-button routerLink="/order">Rendelések</button>
+      <button mat-button (click)="logout()" routerLink="/login">Logout</button>
+    </div>
+    <div *ngIf="!authService.isLoggedIn">
+      <button mat-button routerLink="/login">Login</button>
+      <button mat-button routerLink="/register">Registration</button>
+    </div>
+  </div>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>
