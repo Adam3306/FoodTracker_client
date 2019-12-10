@@ -261,14 +261,14 @@ Beadandó feladat az ELTE Informatikai Karon, az Alkalmazások fejlesztése nev�
 	- Az ételeket szűrheti kategóriák szerint (saláta, húsétel stb), mely nagyban segíti a választást
 	- Az ételeket az adott étel sorában található "Delete" gombbal törölni tudja az étlapról
 	- A lista végén, van egy "New food" gomb, mellyel új ételeket vehet fel az étlapra, az étel nevének, árának és leírásának (opcionális) kitöltésével majd a "Save food" gombra kattintva.
-	- A "Módosít" gombra kattintva van lehetőség egy adott étel árának, leírásának, nevének megváloztatásara. Ezután "Save" gomb megnyomásával megváltozik az adott étel az étlapon.
+	- Az étel sávjára való kattintással van lehetőség egy adott étel árának, leírásának, nevének megváloztatásara. Ezután "Save" gomb megnyomásával megváltozik az adott étel az étlapon.
 - **Italok:**
 	- Az italok menüpontban láthatja az aktuálisan elérhető ételek listáját
 	- A lista tartalmazza az ital nevét, egy rövid leírást ha éppen szükséges, árat, majd egy az italhoz tartozó "Rendelés" gombot.
 	- Az italokat szűrheti kategóriák szerint (üditő, szeszesital stb), mely nagyban segíti a választást
 	- Az italokat az adott ital sorában található "Delete" gombbal törölni tudja az itallapról
 	- A lista végén, van egy "New Drink" gomb, mellyel új italokat vehet fel az itallapra, az ital nevének, árának és leírásának (opcionális) kitöltésével majd a "Save drink" gombra kattintva.
-	- A "Módosít" gombra kattintva van lehetőség egy adott ital árának, leírásának, nevének megváloztatásara. Ezután "Save" gomb megnyomásával megváltozik az adott ital az itallapon.
+	- Az ital sávjára való kattintással van lehetőség egy adott ital árának, leírásának, nevének megváloztatásara. Ezután "Save" gomb megnyomásával megváltozik az adott ital az itallapon.
 - **Rendelések:**
 	- A rendelések menüpontban láthatja vendégenként a rendeléseket, asztal és vendég azonosítóval együtt
 	- Amennyiben nincsen rendelés, a "Még nem rendeltek semmit." felirat fogadja a felhasználót
